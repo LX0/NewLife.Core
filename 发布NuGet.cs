@@ -20,7 +20,7 @@ namespace NewLife.Reflection
             Console.WriteLine("项目：{0}", proj);
 
             var spec = name + ".nuspec";
-            if (!File.Exists(spec.GetFullPath())) "NuGet".Run("spec");
+            if (!File.Exists(spec.GetFullPath())) "NuGet".Run("spec", 5000);
 
             // 部分项目加上前缀
             name = name.EnsureStart("NewLife.");
